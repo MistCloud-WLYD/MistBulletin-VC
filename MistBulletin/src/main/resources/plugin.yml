@@ -1,0 +1,8 @@
+name: MistBulletin
+version: '1.1.0'
+main: MistCloud.mistBulletin.MistBulletin
+api-version: '1.20'
+authors: [ Jens_Hon;Kenty_Xu;ANshiwang ]
+description: 一个雾里云端开发的Velocity公告插件
+website: https://github.com/VFGFL
+author: MistCloud Team

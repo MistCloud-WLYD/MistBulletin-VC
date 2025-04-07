@@ -1,0 +1,82 @@
+# MistBulletin 配置文件
+# 开发团队:雾里云端
+format: |
+  &7●&b&l▃▃▃▃▃▃▃▃ &6&lMistCloud 公告 &b&l▃▃▃▃▃▃▃▃&7●
+  &f
+  {message}
+  &f
+  &7●&b&l▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃&7●
+
+# 性能优化设置-根据服务器玩家数量调整
+performance:
+  batch_sending: false  # 是否启用分批发送，默认关闭
+  batch_size: 50      # 每批发送的玩家数量
+  batch_delay: 100    # 批次间延迟(毫秒)
+  report_enabled: false # 是否启用性能报告，默认关闭
+  debug_log: false    # 是否启用调试日志，默认关闭
+  metrics_interval: 300  # 性能报告间隔（秒）
+  auto_cleanup: false    # 是否自动清理过期的统计数据
+
+announcements:
+  welcome:
+    message: "&c&l服务器公告&r\n&a欢迎来到服务器！&r\n&b希望您玩得开心！"
+    interval: 300
+    loop: true
+    servers:
+      - zc
+      - fb
+    clickable:
+      enabled: true
+      text: "&e&l点击这里传送到大厅"
+      command: "/server lobby"
+    
+  rules:
+    message: "&c服务器规则：&r\n&71. 禁止使用作弊客户端\n&72. 禁止骚扰其他玩家\n&73. 请文明用语"
+    interval: 600
+    loop: true
+    servers: []
+    # 没有配置clickable部分，默认关闭点击功能
+    
+  event:
+    message: "&6限时活动正在进行中！&r\n&e快来参加吧！"
+    interval: 1800
+    loop: false
+    servers:
+      - survival
+    clickable:  
+      enabled: false
+      text: "&b&l点击立即参加活动"
+      command: "/warp event"
+  
+  # 添加一个带点击功能的新公告
+  #activity:
+  #  message: "&6&l周末活动&r\n&e双倍经验即将开始！"
+  #  interval: 900
+  #  loop: true
+  #  servers:
+  #    - survival
+  #    - skyblock
+  #  clickable:
+  #    enabled: true
+  #    text: "&a&l点击领取活动礼包"
+  #    command: "/kit event"
+  
+  # 添加一个不带点击功能的新公告
+  #notice:
+  #  message: "&c&l温馨提示&r\n&7请及时备份您的数据"
+  #  interval: 1200
+  #  loop: true
+  #  servers: []  # 空列表表示发送给所有服务器
+  #  # 不添加clickable部分，默认关闭点击功能
+  
+  # 添加一个明确禁用点击功能的公告
+  #broadcast:
+  #  message: "&e&l全服广播&r\n&b感谢支持服务器发展"
+  #  interval: 600
+  #  loop: true
+  #  servers:
+  #    - lobby
+  #  clickable:
+  #    enabled: false  # 明确禁用点击功能
+  #    text: "&7点击支持"  # 虽然配置了文本但不会显示
+  #    command: "/donate"  # 虽然配置了命令但不会生效 

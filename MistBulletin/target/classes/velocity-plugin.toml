@@ -1,0 +1,6 @@
+name = "MistBulletin"
+id = "mistbulletin"
+version = "1.0.0"
+description = "一个雾里云端开发的Velocity公告插件"
+authors = ["Jens_Hon", "Kenty_Xu", "ANshiwang"]
+main = "MistCloud.mistBulletin.MistBulletin" 
